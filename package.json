@@ -1,0 +1,20 @@
+{
+  "name": "auto-test",
+  "version": "1.0.0",
+  "description": "Ez a projekt egy különálló **Playwright-alapú automatizált tesztcsomag**, amely a `go-admin` nyílt forráskódú admin rendszer **felhasználókezelő modulját** teszteli. A tesztek TypeScript nyelven íródtak, és a [Playwright Test](https://playwright.dev/) keretrendszert használják.",
+  "main": "index.js",
+  "scripts": {
+    "smoke": "playwright test --config=playwright.config.ts --project=smoke --workers=1 --grep @smoke"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.54.1",
+    "@reportportal/agent-js-playwright": "^5.1.11",
+    "@types/dotenv": "^6.1.1",
+    "@types/node": "^24.1.0",
+    "dotenv": "^17.2.1"
+  }
+}
