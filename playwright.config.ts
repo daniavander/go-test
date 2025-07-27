@@ -41,7 +41,7 @@ export default defineConfig({
       use: {
         viewport: { width: 1300, height: 700 },
         //storageState: STAGE_STATE,
-        baseURL: process.env.URL,
+        baseURL: process.env.URL || "http://demo.go-admin.com/admin/login",
         ignoreHTTPSErrors: true,
       },
     },

@@ -38,7 +38,7 @@ jobs:
         env:
           ADMIN_NAME: ${{ secrets.ADMIN_NAME }}
           ADMIN_PWD: ${{ secrets.ADMIN_PWD }}
-          MY_VAR: ${{ vars.URL }}
+          URL: ${{ vars.URL }}
 
       - name: 📝 Publish JUnit Test Results
         if: always()
