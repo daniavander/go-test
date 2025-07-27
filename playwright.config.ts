@@ -26,7 +26,7 @@ export default defineConfig({
     actionTimeout: process.env.CI ? 18 * 1000 : 0, // 18 seconds for CI, 60 seconds for local development
     headless: process.env.CI ? true : false,
     launchOptions: {
-      slowMo: 350,
+      slowMo: 600,
     },
     acceptDownloads: true,
     // devtools: true,
@@ -39,9 +39,9 @@ export default defineConfig({
       name: 'smoke',
       testMatch: ['**/tests/*.spec.ts'],
       use: {
-        viewport: { width: 1300, height: 700 },
+        viewport: { width: 1700, height: 700 },
         //storageState: STAGE_STATE,
-        baseURL: process.env.URL || "http://demo.go-admin.com/admin/login",
+        baseURL: process.env.URL || "http://demo.go-admin.com/",
         ignoreHTTPSErrors: true,
       },
     },
