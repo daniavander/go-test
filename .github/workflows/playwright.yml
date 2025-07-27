@@ -33,11 +33,12 @@ jobs:
       - name: 🧩 Install Playwright browsers
         run: npx playwright install --with-deps chromium
 
-      - name: 🚀 Run tests with api flag
+      - name: 🚀 Run tests with smoke flag
         run: npm run smoke
         env:
           ADMIN_NAME: ${{ secrets.ADMIN_NAME }}
           ADMIN_PWD: ${{ secrets.ADMIN_PWD }}
+          MY_VAR: ${{ vars.URL }}
 
       - name: 📝 Publish JUnit Test Results
         if: always()
